@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <div id="customControls">
+        <button id="PlayPauseBtn">Play</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" class="volume-slider">
+    </div>
+    <audio id="cornbeef" >
+        <source src="music.mp3" type="audio/mpeg"></source>
+    </audio>
+</body>
+<style>
+</style>
+</html>
+
+<script>
+     const audio =    document.getElementById("cornbeef");
+     const PlayPauseBtn = document.getElementById("PlayPauseBtn");
+     
+     PlayPauseBtn.addEventListener("click", function () {
+         if (audio.paused) {
+             audio.play();
+             PlayPauseBtn.textContent = "Pause";
+         } else {
+             audio.pause();
+             PlayPauseBtn.textContent = "Play";
+         }
+     });
+     
+     const volumeControl = document.getElementById("volumeControl");
+     volumeControl.addEventListener("input", function () {
+         audio.volume = volumeControl.value;
+     })
+    
+</script>
+<link rel="stylesheet" href="style.css">

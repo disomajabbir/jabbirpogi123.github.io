@@ -1,0 +1,62 @@
+body {
+    background-image: url('Lebron.jpeg');
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+}
+#envelope {
+    margin: 150px;
+}
+
+#cornbeef{
+    position: absolute;
+    top:90%;
+    bottom:100%;
+    border: 2px solid #002dff;
+    border-radius:30px;
+    background-color:#ffcaaa;
+    width:300px;
+}
+
+#customControls{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+#PlayPauseBtn{
+    padding:10px;
+    background-color: #ff95d2;
+    color: black;
+    border: none;
+    border-radius:50%;
+    cursor:pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    
+}
+
+.PlayPauseBtn:hover {
+    background-color: #ff6390;
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    appearance:none;
+    width:100px;
+    height:10px;
+    border-radius:5px;
+    background: #ff92a1;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.volume-slider: :-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height:20px;
+    background:#fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
